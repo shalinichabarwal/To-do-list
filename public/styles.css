@@ -1,5 +1,5 @@
 html {
-   background-color: #A78295; 
+   background-color: #c597af; 
   
 }
 
@@ -15,7 +15,7 @@ a {
   
 }
 .title {
-  background-color: #237e2b;
+  background-color: #40a349;
   color: beige;
   width: 230px;
   border-radius: 3px;
@@ -67,7 +67,7 @@ input:checked + p {
   margin-top: 50px;
 }
 button.btn{
-  background-color: #237e2b;
+  background-color: #40a349;
   border-radius: 50%;
   font-size: 1.3rem;
   padding-top: 0;
