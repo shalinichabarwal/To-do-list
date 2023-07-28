@@ -6,7 +6,7 @@ app.use(express.static("public"));
 var today = new Date();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3000;
-mongoose.connect("mongodb+srv://shalinichabarwal:shalini03@cluster0.wdslcsh.mongodb.net/todoDB?retryWrites=true",{useNewUrlParser:true,});
+mongoose.connect("mongodb+srv://shalinichabarwal:shalini03@cluster0.wdslcsh.mongodb.net/todoDB?retryWrites=true");
 const Schema = new mongoose.Schema({
   name: {
     type: String,
