@@ -77,3 +77,8 @@ button.btn{
   color: antiquewhite;
   text-align: center;
 }
+@media(max-width:500px){
+  .lists{
+    margin-left: 20px;
+  }
+}
