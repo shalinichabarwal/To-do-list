@@ -1,25 +1,21 @@
 html {
-   background-color: rgb(231, 186, 233); 
+   background-color: #A78295; 
   
 }
 
 h1 {
-  color: #f0b2b4;
+  color: #ec656a;
 }
 .item {
   display: flex;
 }
-.date {
-  text-align: center;
-  margin-left: 140px;
-  color: #b990e0;
-}
+
 a {
   margin-left: 15px;
   
 }
 .title {
-  background-color: #8cb98c;
+  background-color: #237e2b;
   color: beige;
   width: 230px;
   border-radius: 3px;
@@ -71,7 +67,7 @@ input:checked + p {
   margin-top: 50px;
 }
 button.btn{
-  background-color: #8cb98c;
+  background-color: #237e2b;
   border-radius: 50%;
   font-size: 1.3rem;
   padding-top: 0;
@@ -87,11 +83,3 @@ button.btn{
   }
 }
 
-@media(max-width:672px){
-  a{
-    margin-left: 5px;
-  }
-  .date{
-    margin-left: 70px;
-  }
-}
