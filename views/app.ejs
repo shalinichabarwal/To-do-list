@@ -15,7 +15,58 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm  fixed-top hidden-sm hidden-xs">
+<h1>To Do List</h1>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-grey" href="/" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-grey" href="/work" >Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-grey" href="/other" >Other</a>
+            </li>
+            <li class="nav-item">
+                <h2 class="date">
+                    <%= title1 %>
+                </h2>
+            </li>
+          </ul>
+      
+          
+      
+        </div>
+      </nav>
+      
+      <nav class="navbar  visible-xs visible-sm">
+      
+        <button class="navbar-toggler navbar-toggler-left"
+          type="button"
+          aria-controls="mobileNavbar"
+          aria-expanded="false"
+          [attr.aria-expanded]="!isCollapsed"
+          aria-label="Toggle mobile navigation"
+          (click)="toggleMenu()"
+          >
+          <span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobileNavbar" [ngbCollapse]="isCollapsed">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="/" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/work" >Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/other" >Other</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- <div class="container-fluid">
 
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
@@ -24,7 +75,7 @@
 
 
                 <div class="collapse navbar-collapse" id="navbarsExample09">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 visible-sm">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
@@ -44,7 +95,7 @@
 
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
         <div class="lists ">
             <div class="title">
@@ -55,14 +106,15 @@
 
             <% for(var i=0;i<list.length;i++){ %>
                 <form action="/delete" method="post">
-                <div class="item">
-                    <input type="checkbox" class="check" name = "checkbox" value = "<%= list[i]._id %>" onchange="this.form.submit()">
-                    <p class="p">
-                        <%=list[i].name%>
-                    </p>
-                </div>
-                <input type="hidden" name = "hide" value="<%= title2 %>">
-            </form>
+                    <div class="item">
+                        <input type="checkbox" class="check" name="checkbox" value="<%= list[i]._id %>"
+                            onchange="this.form.submit()">
+                        <p class="p">
+                            <%=list[i].name%>
+                        </p>
+                    </div>
+                    <input type="hidden" name="hide" value="<%= title2 %>">
+                </form>
 
                 <% } %>
                     <form action="/" method="post">
@@ -74,7 +126,7 @@
         </div>
         <div class="footer">
             <p>Made with ❤️ by Shalini</p>
-          </div>
+        </div>
 </body>
 
 </html>
